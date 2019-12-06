@@ -425,3 +425,8 @@ template {
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 14px; }
+
+button {
+  outline: none; }
+  button:hover {
+    cursor: pointer; }
