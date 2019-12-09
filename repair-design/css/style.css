@@ -318,7 +318,7 @@ template {
   display: none; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 24px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -368,6 +368,9 @@ body {
       background-color: #E3B873;
       margin: 0 10px; }
 
+.hero__scroll-down {
+  font-family: 'Yeseva One'; }
+
 .header {
   position: fixed;
   left: 0;
@@ -383,6 +386,7 @@ body {
   align-items: center; }
 
 .logo {
+  font-size: 1.075rem;
   color: #E3B873;
   text-transform: uppercase; }
 
@@ -390,7 +394,7 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.85rem;
+  margin-right: 2.5rem;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #E3B873; }
@@ -420,9 +424,13 @@ body {
     margin-left: 4.28rem; }
   .hero__text {
     font-size: 1.57rem;
-    max-width: 500px; }
+    max-width: 500px;
+    line-height: 1.4;
+    margin: 0.9rem 0 3.4rem 0; }
   .hero__button {
-    margin-right: 20px; }
+    margin-right: 17px;
+    width: 14.7rem;
+    height: 3.5rem; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -441,7 +449,10 @@ body {
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    font-size: 0.857rem;
+    font-weight: normal;
+    font-family: Yeseva One; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -449,7 +460,7 @@ body {
       height: 30px;
       border: 2px solid #E3B873;
       border-radius: 50%;
-      margin-left: 12px; }
+      margin-left: 1.1rem; }
 
 .instagram {
   display: flex;
@@ -463,7 +474,8 @@ body {
     text-decoration: none;
     color: #E3B873;
     transform: rotate(90deg);
-    line-height: 0.8px; }
+    line-height: 0.8px;
+    font-size: 1.1rem; }
     .instagram__link::after {
       content: '';
       width: 50px;
@@ -476,13 +488,21 @@ body {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 1.4; }
   .title--primary {
     color: #E3B873; }
+
+.section-title__heading {
+  font-size: 1.42rem; }
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
+  .nav__item {
+    margin-right: 1rem; } }
+
+@media screen and (min-width: 1200px) {
   .nav__item {
     margin-right: 1rem; } }
 
