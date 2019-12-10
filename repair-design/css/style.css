@@ -341,7 +341,7 @@ template {
 .container {
   width: 85%;
   max-width: 1256px;
-  margin: auto; }
+  margin: auto 200px; }
 
 *, *:befor, *:after {
   box-sizing: border-box; }
@@ -357,6 +357,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive; }
+  .section-title__heading {
+    font-size: 1.42rem; }
   .section-title__image {
     display: flex;
     justify-content: center;
@@ -384,17 +386,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .menu__contacts {
+    display: flex; }
 
 .logo {
   font-size: 1.075rem;
   color: #E3B873;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-right: 1rem; }
 
 .nav__item {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.5rem;
+  margin-right: 2.59rem;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #E3B873; }
@@ -403,7 +408,17 @@ body {
   color: #E3B873; }
 
 .contacts__phone {
-  margin-right: 45px; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 45px;
+  text-decoration: none; }
+  .contacts__phone::after {
+    content: '';
+    width: 119px;
+    height: 1px;
+    background-color: #E3B873; }
 
 .hero {
   position: relative;
@@ -426,8 +441,9 @@ body {
     font-size: 1.57rem;
     max-width: 500px;
     line-height: 1.4;
-    margin: 0.9rem 0 3.4rem 0; }
+    margin: 0.9rem 0 2.9rem 0; }
   .hero__button {
+    margin-top: 0.5rem;
     margin-right: 17px;
     width: 14.7rem;
     height: 3.5rem; }
@@ -456,8 +472,8 @@ body {
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
-      width: 30px;
-      height: 30px;
+      width: 1.92rem;
+      height: 1.92rem;
       border: 2px solid #E3B873;
       border-radius: 50%;
       margin-left: 1.1rem; }
@@ -489,12 +505,9 @@ body {
   text-transform: uppercase;
   font-size: 2.857rem;
   font-weight: 400;
-  line-height: 1.4; }
+  line-height: 1.3; }
   .title--primary {
     color: #E3B873; }
-
-.section-title__heading {
-  font-size: 1.42rem; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -504,7 +517,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .nav__item {
-    margin-right: 1rem; } }
+    margin-right: 2.59rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
