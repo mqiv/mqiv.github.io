@@ -341,7 +341,7 @@ template {
 .container {
   width: 85%;
   max-width: 1256px;
-  margin: auto 200px; }
+  margin: auto 160px; }
 
 *, *:befor, *:after {
   box-sizing: border-box; }
@@ -436,7 +436,8 @@ body {
   .hero__content {
     position: relative;
     max-width: 47.85rem;
-    margin-left: 4.28rem; }
+    margin-left: 4.28rem;
+    margin-top: 6.8rem; }
   .hero__text {
     font-size: 1.57rem;
     max-width: 500px;
