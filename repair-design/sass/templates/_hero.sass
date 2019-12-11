@@ -2,7 +2,6 @@
   position: relative
   display: flex
   flex-direction: column 
-  // padding-top: 100px
   background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
   height: 100vh
   color: $light
@@ -86,3 +85,7 @@
     line-height: 1.3
     &--primary
       color: $primary
+@media screen and ( max-width: 500px )
+  .hero
+    .container
+      margin-top: 6.071rem
