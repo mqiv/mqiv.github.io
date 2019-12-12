@@ -677,8 +677,8 @@ img {
 
 @media screen and (max-width: 1920px) {
   .container {
-    width: 90%;
-    max-width: 1700px;
+    width: 91%;
+    max-width: 1900px;
     margin: auto; } }
 
 @media screen and (min-width: 1200px) {
