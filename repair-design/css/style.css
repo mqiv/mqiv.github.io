@@ -584,7 +584,7 @@ img {
   padding: 1.214rem 3.8rem; }
 
 .card span {
-  display: none; }
+  height: 0; }
 
 @media screen and (max-width: 1920px) {
   .container {
