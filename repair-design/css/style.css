@@ -554,6 +554,8 @@ img {
     color: #E3B873; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 100;
   left: 0;
@@ -565,9 +567,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
-    width: 29rem;
     position: relative;
+    width: 29rem;
     background: #131313 url(../img/modal-bg.svg) no-repeat center;
     padding: 2.19rem 3.5rem 2rem;
     color: #fff; }
