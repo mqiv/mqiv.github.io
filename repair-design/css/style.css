@@ -811,12 +811,26 @@ img {
   .section-title__heading {
     font-size: 1.85rem;
     font-weight: 400; }
+    .section-title__heading--primary {
+      font-size: 1.571rem; }
+  .section-title__word::after {
+    display: none; }
+  .section-title__text {
+    font-size: 1rem; }
   .section-title__description {
     margin: auto;
     margin-top: 1.64rem;
     font-size: 1.3rem;
     line-height: 135.84%;
     max-width: 25.9rem; }
+  .col-50 {
+    width: 70%; }
+  .section-title {
+    text-align: center; }
+  .swiper-slide__heading {
+    font-size: 1rem; }
+  .swiper-slide__value {
+    font-size: 1rem; }
   .row {
     flex-direction: column;
     align-items: center; }
