@@ -1,23 +1,65 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  }
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-  
-  closeBtn.addEventListener('click', switchModal);
-  
-  // closeModal.addEventListener('click', switchModal)
-  window.addEventListener('click', outsideClick);
-  function outsideClick(e) {
-    if (e.target == modal) {
-      modal.style.display = 'none';
-    }
-  }
-  
+$(document).ready(function () {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close');
 
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 800) {
+        $('.scrollup').fadeIn();
+    } else {
+        $('.scrollup').fadeOut();
+    }
+  });
+      
+    $('.scrollup').click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 1500);
+      return false;
+    });
+    //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+     loop: true,
+     pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+   });
+
+   var next = $('.swiper-button-next');
+   var prev = $('.swiper-button-prev');
+   var bullets = $('.swiper-pagination');
+
+   next.css('left', prev.width() + 25 + bullets.width() + 25)
+   bullets.css('left', prev.width() + 25)
+
+});
+
+
+
+$(document).mouseup(function (e){ // событие клика по веб-документу
+  var modalctr = $("#mod"); // тут указываем ID элемента
+  var modall = $('#mud')
+  if (modall.is(e.target) && modall.has(e.target).length === 0){
+    modalctr.hide();
+    modall.hide();
+  }
+  
+  // if (div.is(e.target) // если клик был по нашему блоку
+  //     && div.has(e.target).length === 0) { // и не по его дочерним элементам
+  //   div.hide(); // скрываем его
+  // }
 });
