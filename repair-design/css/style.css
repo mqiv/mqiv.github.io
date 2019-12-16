@@ -878,7 +878,9 @@ img {
     .design .card__item-none {
       display: none; }
     .design .card__pricetag {
-      padding: 1rem 3.8rem; } }
+      padding: 1rem 3.8rem; }
+  .idea {
+    display: none; } }
 
 @media screen and (max-width: 770px) {
   html {
