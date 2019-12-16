@@ -63,3 +63,24 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
   //   div.hide(); // скрываем его
   // }
 });
+
+$(function() {
+  var first = $(".swiper-container-first");
+  var second = $(".swiper-container-second");
+  $(window).resize(function() {
+      var i = $(".swiper-container-first, .swiper-container-second").index(first);
+      if ($(window).width() <= "820" && !i) {
+          var a = $("<abracadabra/>");
+          a.insertAfter(first);
+          first.insertAfter(second);
+          second.insertAfter(a);
+          a.remove()
+      } else if ($(window).width() > "820" && i) {
+          var a = $("<abracadabra/>");
+          a.insertAfter(first);
+          first.insertAfter(second);
+          second.insertAfter(a);
+          a.remove()
+      }
+  }).resize()
+});

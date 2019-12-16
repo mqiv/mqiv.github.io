@@ -29,16 +29,25 @@
         display: none
 @media screen and ( max-width: 820px )
   .section-title
+    &--left
+      display: flex
+      flex-direction: column
+      align-items: center
     &__heading
-      font-size: 1.85rem
+      font-size: 1.7rem
       font-weight: 400
-      &--primary
-        font-size: 1.571rem
+      display: flex
+      flex-direction: column
+      align-items: center
+      line-height: 1.5
+      margin-bottom: 0.9rem
     &__word
       &::after
         display: none
     &__text
-      font-size: 1rem
+      align-items: center
+      line-height: 1.99rem
+      width: 24rem
     &__description
       margin: auto
       margin-top: 1.64rem
@@ -51,12 +60,16 @@
     &-title
       text-align: center
   .swiper
+    &-pagination, &-button-prev, &-button-next
+      display: none
     &-slide
       // margin: 0 auto 
       &__heading
-        font-size: 1rem
+        font-size: 1.18rem
+        margin-bottom: 0.8rem
       &__value
-        font-size: 1rem
+        font-size: 1.18rem
+        line-height: 1.4
   .row
     flex-direction: column
     align-items: center
@@ -98,10 +111,6 @@
         display: none
       &__pricetag
         padding: 1rem 3.8rem
-  .section-title
-    &__heading
-      font-size: 1.85rem
-      font-weight: 400
 @media screen and ( max-width: 770px )
   html
     font-size: 12.5px
@@ -112,6 +121,10 @@
     &__phone
       &::after
         display: none
+  .section
+    &-title
+      &--left
+
 @media screen and ( max-width: 570px )
   html
     font-size: 12.5px
