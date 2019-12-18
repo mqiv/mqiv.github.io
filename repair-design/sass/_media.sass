@@ -40,7 +40,7 @@
       flex-direction: column
       align-items: center
       line-height: 1.5
-      margin-bottom: 0.9rem
+      margin-bottom: 1.4rem
     &__word
       &::after
         display: none
@@ -123,10 +123,37 @@
     &__phone
       &::after
         display: none
-  .section
-    &-title
-      &--left
-
+  .control
+    // background-color: $dark
+    // color: $light
+    &__section-title
+      margin-bottom: 3.4rem
+      &__heading
+        font-size: 1.8rem
+    &__video
+      width: 100%
+      min-height: 16.5rem
+      margin-bottom: 2.1rem
+    &__text
+      font-size: 1.119rem
+      line-height: 1.78
+      margin-bottom: 2.31rem
+      &::before
+        content: ''
+        margin-bottom: 1.09rem
+    &__input
+      padding: 0.8rem 0
+      font-size: 1.46rem
+      color: $light
+      &-group
+        margin-bottom: 4.6rem
+    &__label
+      font-size: 1.21rem
+    .video
+      &__play
+        width: 20%
+    &__form
+      display: block
 @media screen and ( max-width: 570px )
   html
     font-size: 12.5px
@@ -164,9 +191,9 @@
       min-width: 22.86rem
       margin-bottom: 1.85rem
       font-size: 14px
-  .button
-    &--primary
-      margin-bottom: 2.2rem
+    .button
+      &--primary
+        margin-bottom: 2.2rem
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
@@ -175,3 +202,103 @@
   .hero
     .container
       margin-top: 6.071rem
+@media screen and ( max-width: 375px )
+  .hero
+    height: 92.4vh
+    &::after
+      display: none
+    &__content
+      margin-top: 5.5rem
+    &__title
+      margin-bottom: 0
+    &__text
+      max-width: none
+      width: 112%
+      font-size: 1.449rem
+      margin-bottom: 2.6rem
+    &__button
+      width: 27.2rem
+      height: 4.1rem
+    .button
+      font-size: 1.03rem
+      &--primary
+        margin-bottom: 2rem
+  .section
+    padding-top: 1.59rem
+    &-title
+      &__heading
+        margin-bottom: 0.73rem
+        font-size: 1.6rem
+      &__text
+        line-height: 1.7
+        font-size: 1.12rem
+        margin-bottom: 2.8rem
+  .swiper
+    &-container-first
+      height: 183px
+    &-slide
+      &__heading
+        margin-top: 2.77rem
+        margin-bottom: 0
+        padding-bottom: 0.6rem
+        font-size: 1.15rem
+    &__value
+      font-size: 1.14rem
+    &__text
+      flex-basis: 46.9%
+      margin-bottom: -7.5rem
+      padding-bottom: 0
+  .projects
+    padding-bottom: 31.2rem
+  .control
+    background-color: $dark
+    color: $light
+    height: 32.99rem
+    &__section-title
+      &__heading
+        margin-bottom: 1.25rem
+        font-size: 1.75rem
+    &__text
+      &::before
+        margin-bottom: 1.25rem
+    &__label
+      margin-bottom: -10px
+      color: rgba($light, 0.5)
+    &__input
+      padding: 0.5rem 0
+      margin: 0.39rem 0
+      border-bottom: 1px solid $light
+      &::placeholder
+        color: $light
+    &__button
+      padding: 1.3rem 10.6rem
+      font-size: 1.2rem
+    &__policy
+      margin-top: -4.3rem
+      margin-bottom: 5rem
+      &-label
+        justify-content: flex-start
+        margin-left: 2px
+        font-size: 1.29rem
+  .type
+    padding-top: 5.18rem
+    .section-title
+      &__heading
+        font-size: 1.74rem
+        margin-top: 1.2rem
+        margin-bottom: 1.1rem
+    .container
+      width: 90%
+  .types
+    &__card
+      margin-bottom: 4.5rem
+      margin-left: 0
+      width: 100%
+  .card
+    &__text
+      margin-top: -11.4rem
+    &__list
+      line-height: 1.79rem
+    &__pricetag
+      padding: 0.9rem 2rem
+      bottom: -1rem

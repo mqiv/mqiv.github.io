@@ -46,6 +46,8 @@ $(document).ready(function () {
    next.css('left', prev.width() + 25 + bullets.width() + 25)
    bullets.css('left', prev.width() + 25)
 
+   new WOW().init();
+
 });
 
 
@@ -76,6 +78,27 @@ $(function() {
           second.insertAfter(a);
           a.remove()
       } else if ($(window).width() > "820" && i) {
+          var a = $("<abracadabra/>");
+          a.insertAfter(first);
+          first.insertAfter(second);
+          second.insertAfter(a);
+          a.remove()
+      }
+  }).resize()
+});
+
+$(function() {
+  var first = $(".control__button-first");
+  var second = $(".control__policy-second");
+  $(window).resize(function() {
+      var i = $(".control__button-first, .control__policy-second").index(first);
+      if ($(window).width() <= "770" && !i) {
+          var a = $("<abracadabra/>");
+          a.insertAfter(first);
+          first.insertAfter(second);
+          second.insertAfter(a);
+          a.remove()
+      } else if ($(window).width() > "770" && i) {
           var a = $("<abracadabra/>");
           a.insertAfter(first);
           first.insertAfter(second);

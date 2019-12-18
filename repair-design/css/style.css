@@ -350,7 +350,7 @@ template {
   font-size: 1.31rem;
   color: #fff;
   padding: 0.5rem 0; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #fff; }
 
 .policy__checkbox {
@@ -409,6 +409,8 @@ img {
     text-align: center; }
     .section-title--left {
       text-align: left; }
+    .section-title--light {
+      color: #fff; }
     .section-title__heading {
       font-family: 'Yeseva One', cursive;
       text-transform: uppercase;
@@ -655,6 +657,77 @@ img {
     padding: 1.2rem 3.2rem;
     font-size: 1rem; }
 
+.control__section-title {
+  margin-bottom: 2.229rem;
+  margin-top: -30rem; }
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4.2rem;
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") center no-repeat;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  max-width: 40.7rem;
+  font-family: 'Futura Book', sans-serif;
+  margin: auto;
+  margin-bottom: 4.495rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 1.7; }
+  .control__text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: 1.85rem;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px; }
+
+.control__form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto;
+  justify-content: space-between; }
+
+.control__button {
+  padding: 1.214rem 4.428rem;
+  font-size: 1.071rem;
+  font-weight: 500; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.1rem; }
+  .control__policy-label {
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 22px; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
+
 .type .container, .design .container {
   width: 85%;
   max-width: 1265px;
@@ -672,7 +745,7 @@ img {
   width: 70%;
   max-width: 23.57rem;
   margin: 0 auto;
-  margin-top: -9.37rem;
+  margin-top: -8.2rem;
   padding: 0.7rem 2.14rem;
   background-color: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
@@ -707,9 +780,6 @@ img {
 .design__section-title {
   margin-bottom: 2.78rem; }
 
-.card__pricetag {
-  padding: 1.214rem 3.8rem; }
-
 .card span {
   height: 0; }
 
@@ -727,13 +797,13 @@ img {
     height: 3rem;
     border: 5px solid #E3B873;
     border-radius: 50%; }
-    .scrollup::before:hover {
-      transform: scale(1.2); }
+
+.projects {
+  padding-bottom: 30rem; }
 
 .swiper-slide {
   display: flex;
-  flex-wrap: wrap;
-  width: 375px; }
+  flex-wrap: wrap; }
   .swiper-slide__text {
     flex-basis: 50%;
     margin-bottom: 2.42rem;
@@ -823,7 +893,7 @@ img {
     flex-direction: column;
     align-items: center;
     line-height: 1.5;
-    margin-bottom: 0.9rem; }
+    margin-bottom: 1.4rem; }
   .section-title__word::after {
     display: none; }
   .section-title__text {
@@ -895,7 +965,34 @@ img {
   .hero__scroll-down {
     display: none; }
   .contacts__phone::after {
-    display: none; } }
+    display: none; }
+  .control__section-title {
+    margin-bottom: 3.4rem; }
+    .control__section-title__heading {
+      font-size: 1.8rem; }
+  .control__video {
+    width: 100%;
+    min-height: 16.5rem;
+    margin-bottom: 2.1rem; }
+  .control__text {
+    font-size: 1.119rem;
+    line-height: 1.78;
+    margin-bottom: 2.31rem; }
+    .control__text::before {
+      content: '';
+      margin-bottom: 1.09rem; }
+  .control__input {
+    padding: 0.8rem 0;
+    font-size: 1.46rem;
+    color: #fff; }
+    .control__input-group {
+      margin-bottom: 4.6rem; }
+  .control__label {
+    font-size: 1.21rem; }
+  .control .video__play {
+    width: 20%; }
+  .control__form {
+    display: block; } }
 
 @media screen and (max-width: 570px) {
   html {
@@ -932,7 +1029,7 @@ img {
     min-width: 22.86rem;
     margin-bottom: 1.85rem;
     font-size: 14px; }
-  .button--primary {
+  .hero .button--primary {
     margin-bottom: 2.2rem; } }
 
 @media screen and (max-height: 520px) {
@@ -942,3 +1039,96 @@ img {
 @media screen and (max-width: 500px) {
   .hero .container {
     margin-top: 6.071rem; } }
+
+@media screen and (max-width: 375px) {
+  .hero {
+    height: 92.4vh; }
+    .hero::after {
+      display: none; }
+    .hero__content {
+      margin-top: 5.5rem; }
+    .hero__title {
+      margin-bottom: 0; }
+    .hero__text {
+      max-width: none;
+      width: 112%;
+      font-size: 1.449rem;
+      margin-bottom: 2.6rem; }
+    .hero__button {
+      width: 27.2rem;
+      height: 4.1rem; }
+    .hero .button {
+      font-size: 1.03rem; }
+      .hero .button--primary {
+        margin-bottom: 2rem; }
+  .section {
+    padding-top: 1.59rem; }
+    .section-title__heading {
+      margin-bottom: 0.73rem;
+      font-size: 1.6rem; }
+    .section-title__text {
+      line-height: 1.7;
+      font-size: 1.12rem;
+      margin-bottom: 2.8rem; }
+  .swiper-container-first {
+    height: 183px; }
+  .swiper-slide__heading {
+    margin-top: 2.77rem;
+    margin-bottom: 0;
+    padding-bottom: 0.6rem;
+    font-size: 1.15rem; }
+  .swiper__value {
+    font-size: 1.14rem; }
+  .swiper__text {
+    flex-basis: 46.9%;
+    margin-bottom: -7.5rem;
+    padding-bottom: 0; }
+  .projects {
+    padding-bottom: 31.2rem; }
+  .control {
+    background-color: #131313;
+    color: #fff;
+    height: 32.99rem; }
+    .control__section-title__heading {
+      margin-bottom: 1.25rem;
+      font-size: 1.75rem; }
+    .control__text::before {
+      margin-bottom: 1.25rem; }
+    .control__label {
+      margin-bottom: -10px;
+      color: rgba(255, 255, 255, 0.5); }
+    .control__input {
+      padding: 0.5rem 0;
+      margin: 0.39rem 0;
+      border-bottom: 1px solid #fff; }
+      .control__input::placeholder {
+        color: #fff; }
+    .control__button {
+      padding: 1.3rem 10.6rem;
+      font-size: 1.2rem; }
+    .control__policy {
+      margin-top: -4.3rem;
+      margin-bottom: 5rem; }
+      .control__policy-label {
+        justify-content: flex-start;
+        margin-left: 2px;
+        font-size: 1.29rem; }
+  .type {
+    padding-top: 5.18rem; }
+    .type .section-title__heading {
+      font-size: 1.74rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1.1rem; }
+    .type .container {
+      width: 90%; }
+  .types__card {
+    margin-bottom: 4.5rem;
+    margin-left: 0;
+    width: 100%; }
+  .card__text {
+    margin-top: -11.4rem; }
+  .card__list {
+    line-height: 1.79rem; }
+  .card__pricetag {
+    padding: 0.9rem 2rem;
+    bottom: -1rem; } }
