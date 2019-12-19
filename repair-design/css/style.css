@@ -863,6 +863,22 @@ img {
     text-align: center;
     margin-bottom: 3.35rem;
     margin-top: 0; }
+    .footer__title__heading {
+      display: flex;
+      margin: auto;
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive;
+      max-width: 42.087rem;
+      font-size: 1.428rem;
+      font-weight: normal;
+      line-height: 2rem;
+      color: #E3B873; }
+    .footer__title__image {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 3.092rem; }
+    .footer__title-icon__mail {
+      margin-right: 1.071rem; }
   .footer__form {
     display: flex;
     flex-wrap: wrap;
@@ -1187,11 +1203,17 @@ img {
     background: #131313; }
     .footer__wrap {
       background-color: #131313;
-      padding: 0;
+      padding: 0 0 3.715rem 0;
       margin: 0; }
     .footer__title {
       font-size: 1.6rem;
       margin-bottom: 4.15rem; }
+      .footer__title__heading {
+        font-size: 1.41rem;
+        line-height: 138.6%;
+        max-width: 26rem; }
+      .footer__title-icon__mail, .footer__title-icon__inst {
+        width: 39px; }
     .footer__form {
       display: block; }
     .footer__input {
@@ -1207,4 +1229,6 @@ img {
       margin-top: -3rem;
       margin-left: -1rem; }
     .footer__button {
-      width: 100%; } }
+      width: 100%; }
+    .footer__menu {
+      display: none; } }
