@@ -50,8 +50,27 @@ $(document).ready(function () {
 
 });
 
+// АНИМАЦИЯ НА САЙТЕ
+// var animTimer;
+// function animate() {
+//     animTimer = setInterval(function () {
+//          /* тут код анимации*/
+//     },1000)
+// }
+// А потом повесьте все на событие onscroll у документа
+
+//     window.onscroll = function () {
+//    /* считаем расстояние до нужного блока */
+//    /* 
+//       тут element - это ссылка на элемент, 
+//       при достижении которого нужного показать анимацию 
+//    */
+//    if(scrollY == element.offsetTop) animate();
+// }
 
 
+
+// ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ВНЕ ЕГО ОБЛАСТИ
 $(document).mouseup(function (e){ // событие клика по веб-документу
   var modalctr = $("#mod"); // тут указываем ID элемента
   var modall = $('#mud')
@@ -66,6 +85,7 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
   // }
 });
 
+// ЗАМЕНА БЛОКОВ
 $(function() {
   var first = $(".swiper-container-first");
   var second = $(".swiper-container-second");
@@ -87,6 +107,7 @@ $(function() {
   }).resize()
 });
 
+// ЗАМЕНА БЛОКОВ
 $(function() {
   var first = $(".control__button-first");
   var second = $(".control__policy-second");
