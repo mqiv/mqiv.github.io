@@ -374,6 +374,17 @@ template {
   .policy__label--center {
     justify-content: center; }
 
+.invalid {
+  padding-top: 3px; }
+
+label.invalid {
+  color: red;
+  padding-top: 3px; }
+
+input.invalid {
+  border-bottom: 1px solid red;
+  padding-top: 3px; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -648,10 +659,12 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.2rem; }
-    .modal__input:last-of-type {
-      margin-bottom: -0.2rem; }
+  .modal__input:last-of-type {
+    margin-bottom: -0.2rem; }
   .modal__policy {
     margin-bottom: 2.8rem;
     font-size: 1.14rem; }
@@ -710,10 +723,12 @@ img {
   font-size: 1.071rem;
   font-weight: 500; }
 
-.control__input-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 30%; }
+.control__input {
+  color: #131313; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
 
 .control__label {
   margin-bottom: -7px; }
@@ -831,7 +846,7 @@ img {
   bottom: -1.5px; }
 
 .idea {
-  padding-bottom: 20rem; }
+  padding-bottom: 35rem; }
 
 .swiper-slide__heading__number {
   display: flex;
@@ -843,6 +858,66 @@ img {
     width: 5.5%;
     height: 1.2px;
     background-color: #E3B873; }
+
+.team {
+  padding-bottom: 20rem; }
+  .team .container {
+    max-width: 76.945rem; }
+  .team .row {
+    justify-content: space-between; }
+  .team__section-title {
+    margin-top: -35rem;
+    margin-bottom: 5.89rem;
+    font-size: 0.95rem; }
+    .team__section-title__description {
+      font-size: 1.428rem;
+      font-family: 'Futura Book';
+      max-width: 32rem;
+      margin: auto;
+      margin-top: 1.3rem;
+      line-height: 1.928rem; }
+  .team__card {
+    margin-left: 1.5rem;
+    width: 86%; }
+  .team .card__text {
+    padding: 0.7rem 0.3rem;
+    margin-top: -6.2rem;
+    max-width: 23.57rem;
+    width: 80%; }
+  .team .card__title {
+    font-size: 1.29rem;
+    text-align: center; }
+  .team .card__list {
+    text-decoration: none;
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    list-style-type: none; }
+  .team .card__pricetag {
+    bottom: -1.25rem;
+    padding: 1.2rem 3.2rem;
+    font-size: 0.884rem; }
+  .team__text {
+    max-width: 40.7rem;
+    font-family: 'Futura Book', sans-serif;
+    margin: auto;
+    margin-bottom: 4.495rem;
+    text-align: center;
+    font-size: 1.428rem;
+    line-height: 1.7; }
+    .team__text::before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 0.6rem;
+      margin-top: 4.8rem;
+      width: 55px;
+      height: 2px;
+      background-color: #E3B873;
+      border-radius: 30px; }
+  .team .section-title__image {
+    margin-top: -2px; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") center no-repeat;
@@ -1199,6 +1274,17 @@ img {
   .card__pricetag {
     padding: 0.9rem 2rem;
     bottom: -1rem; }
+  .team {
+    padding-bottom: 0;
+    background: #131313; }
+    .team__text {
+      display: none; }
+    .team__section-title {
+      margin-top: 0; }
+    .team .card__text {
+      margin: -6.2rem auto 7.928rem; }
+    .team .card__pricetag {
+      padding: 1.2rem 3.48rem; }
   .footer {
     background: #131313; }
     .footer__wrap {

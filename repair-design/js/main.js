@@ -48,26 +48,90 @@ $(document).ready(function () {
 
    new WOW().init();
 
+  // ВАЛИДАЦИЯ ФОРМЫ
+   $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // Строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // Блочное правило
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Назовите своё имя",
+        minlength: "Имя не должно быть короче двух символов",
+        maxlength: "Имя не должно быть длинее 15 символов"
+      },
+      userPhone: "Введите телефон",
+      userEmail:{
+        required: "Укажите свой Email",
+        email: "Введите в формате: example@domain.com"
+      }
+    }
+  });
+
+   $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // Строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+    },
+    messages: {
+      userName: {
+        required: "Назовите своё имя",
+        minlength: "Имя не должно быть короче двух символов",
+        maxlength: "Имя не должно быть длинее 15 символов"
+      },
+      userPhone: "Введите телефон",
+    }
+  });
+
+
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "label",
+    rules: {
+      // Строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+    },
+    messages: {
+      userName: {
+        required: "Назовите своё имя",
+        minlength: "Имя не должно быть короче двух символов",
+        maxlength: "Имя не должно быть длинее 15 символов"
+      },
+      userPhone: "Введите телефон",
+    }
+  });
+
+
+  // Маска для телефона
+  $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+
 });
-
-// АНИМАЦИЯ НА САЙТЕ
-// var animTimer;
-// function animate() {
-//     animTimer = setInterval(function () {
-//          /* тут код анимации*/
-//     },1000)
-// }
-// А потом повесьте все на событие onscroll у документа
-
-//     window.onscroll = function () {
-//    /* считаем расстояние до нужного блока */
-//    /* 
-//       тут element - это ссылка на элемент, 
-//       при достижении которого нужного показать анимацию 
-//    */
-//    if(scrollY == element.offsetTop) animate();
-// }
-
 
 
 // ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ВНЕ ЕГО ОБЛАСТИ
