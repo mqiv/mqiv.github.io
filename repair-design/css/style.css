@@ -979,6 +979,11 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 3.398rem; }
+  .footer__map {
+    max-width: 66.071rem;
+    margin: auto;
+    margin-bottom: 4.709rem;
+    min-height: 465px; }
 
 .scrollup {
   right: 3rem;
