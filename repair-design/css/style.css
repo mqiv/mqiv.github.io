@@ -1075,7 +1075,11 @@ img {
   html {
     font-size: 12px; }
   .nav__item {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .feedback {
+    display: none; }
+  .team {
+    padding-bottom: 20rem; } }
 
 @media screen and (max-width: 992px) {
   html {
