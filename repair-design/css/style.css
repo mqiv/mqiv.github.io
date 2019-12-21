@@ -859,70 +859,131 @@ img {
     height: 1.2px;
     background-color: #E3B873; }
 
-.team {
-  padding-bottom: 20rem; }
-  .team .container {
-    max-width: 76.945rem; }
-  .team .row {
-    justify-content: space-between; }
-  .team__section-title {
-    margin-top: -35rem;
-    margin-bottom: 5.89rem;
-    font-size: 0.95rem; }
-    .team__section-title__description {
+.team .container {
+  max-width: 76.945rem; }
+
+.team .row {
+  justify-content: space-between; }
+
+.team__section-title {
+  margin-top: -35rem;
+  margin-bottom: 5.89rem;
+  font-size: 0.95rem; }
+  .team__section-title__description {
+    font-size: 1.428rem;
+    font-family: 'Futura Book';
+    max-width: 32rem;
+    margin: auto;
+    margin-top: 1.3rem;
+    line-height: 1.928rem; }
+
+.team__card {
+  margin-left: 1.5rem;
+  width: 86%; }
+
+.team .card__text {
+  padding: 0.7rem 0.3rem;
+  margin-top: -6.2rem;
+  max-width: 23.57rem;
+  width: 80%; }
+
+.team .card__title {
+  font-size: 1.29rem;
+  text-align: center; }
+
+.team .card__list {
+  text-decoration: none;
+  padding: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  list-style-type: none; }
+
+.team .card__pricetag {
+  bottom: -1.25rem;
+  padding: 1.2rem 3.2rem;
+  font-size: 0.884rem; }
+
+.team__text {
+  max-width: 40.7rem;
+  font-family: 'Futura Book', sans-serif;
+  margin: auto;
+  margin-bottom: 4.495rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 1.7; }
+  .team__text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: 0.6rem;
+    margin-top: 4.8rem;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px; }
+
+.team .section-title__image {
+  margin-top: -2px; }
+
+.feedback {
+  padding-bottom: 26.6rem; }
+  .feedback .row {
+    justify-content: center; }
+  .feedback__section-title {
+    margin-bottom: 4.5rem; }
+    .feedback__section-title__description {
       font-size: 1.428rem;
       font-family: 'Futura Book';
       max-width: 32rem;
       margin: auto;
       margin-top: 1.3rem;
-      line-height: 1.928rem; }
-  .team__card {
-    margin-left: 1.5rem;
-    width: 86%; }
-  .team .card__text {
-    padding: 0.7rem 0.3rem;
-    margin-top: -6.2rem;
-    max-width: 23.57rem;
-    width: 80%; }
-  .team .card__title {
-    font-size: 1.29rem;
-    text-align: center; }
-  .team .card__list {
-    text-decoration: none;
-    padding: 0;
-    font-size: 1.2rem;
-    text-align: center;
+      line-height: 1.928rem;
+      width: 19%; }
+  .feedback .section-title__heading {
+    margin-bottom: 1rem; }
+  .feedback .card__text {
+    margin-top: 0; }
+  .feedback .card__image {
+    border-radius: 50%;
+    width: 5.428rem; }
+  .feedback .card__title {
+    display: block;
+    margin-top: -4.3rem;
     margin-bottom: 2.5rem;
-    list-style-type: none; }
-  .team .card__pricetag {
-    bottom: -1.25rem;
-    padding: 1.2rem 3.2rem;
-    font-size: 0.884rem; }
-  .team__text {
-    max-width: 40.7rem;
-    font-family: 'Futura Book', sans-serif;
-    margin: auto;
-    margin-bottom: 4.495rem;
-    text-align: center;
-    font-size: 1.428rem;
-    line-height: 1.7; }
-    .team__text::before {
+    margin-left: 7rem; }
+  .feedback .card__list {
+    padding: 0;
+    line-height: 181%;
+    width: 97%;
+    margin-bottom: 1rem; }
+  .feedback .card__pricetag {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    margin-left: -1.5rem;
+    padding: 0.7rem 1.15rem;
+    font-size: 1.15rem;
+    width: 79%; }
+    .feedback .card__pricetag::after {
       content: '';
-      display: block;
-      margin: auto;
-      margin-bottom: 0.6rem;
-      margin-top: 4.8rem;
-      width: 55px;
-      height: 2px;
-      background-color: #E3B873;
-      border-radius: 30px; }
-  .team .section-title__image {
-    margin-top: -2px; }
+      position: absolute;
+      background-color: #fff;
+      width: 1px;
+      height: 100%;
+      align-self: center;
+      margin-left: 40%; }
+    .feedback .card__pricetag__left, .feedback .card__pricetag__right {
+      display: flex;
+      align-items: center; }
+    .feedback .card__pricetag__text {
+      padding-left: 15px; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") center no-repeat;
   background-size: cover;
-  padding-top: 3rem; }
+  padding-top: 4.1rem; }
   .footer__wrap {
     background-color: #181818;
     max-width: 37.3rem;

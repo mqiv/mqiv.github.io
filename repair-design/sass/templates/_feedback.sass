@@ -1,0 +1,57 @@
+.feedback
+  padding-bottom: 26.6rem
+  .row
+    justify-content: center
+  &__section-title
+    margin-bottom: 4.5rem
+    &__description
+      font-size: 1.428rem
+      font-family: 'Futura Book'
+      max-width: 32rem
+      margin: auto
+      margin-top: 1.3rem
+      line-height: 1.928rem
+      width: 19%
+  .section-title
+    &__heading
+      margin-bottom: 1rem
+  .card
+    &__text
+      margin-top: 0
+    &__image
+      border-radius: 50%
+      width: 5.428rem
+    &__title
+      display: block
+      margin-top: -4.3rem
+      margin-bottom: 2.5rem
+      margin-left: 7rem
+    &__list
+      padding: 0
+      line-height: 181%
+      width: 97%
+      margin-bottom: 1rem
+    &__pricetag
+      position: relative
+      display: flex
+      justify-content: space-between
+      font-weight: 300
+      margin-left: -1.5rem
+      padding: 0.7rem 1.15rem
+      font-size: 1.15rem
+      width: 79%
+      &::after
+        content: ''
+        position: absolute
+        background-color: $light
+        width: 1px
+        height: 100%
+        align-self: center
+        margin-left: 40%
+      &__left, &__right
+        display: flex
+        align-items: center
+      &__right
+        // margin-left: 2.357rem
+      &__text
+        padding-left: 15px
