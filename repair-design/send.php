@@ -14,7 +14,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                      // Enable verbose debug output
+    $mail->SMTPDebug = 0;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -25,7 +25,7 @@ try {
 
     //Recipients
     $mail->setFrom('mqivdb@gmail.com', 'Daniil');
-    $mail->addAddress('islamov.tema@yandex.ru');     // Add a recipient
+    $mail->addAddress('danya5319@gmail.com');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
@@ -33,7 +33,7 @@ try {
     $mail->Body    = 'Имя пользователя: ${userName}, его телефон: ${userPhone}. его почта: ${userEmail}';
 
     $mail->send();
-    echo 'Письмо отправлено';
+    header('Location: thanks.html');
 } catch (Exception $e) {
     echo " Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
