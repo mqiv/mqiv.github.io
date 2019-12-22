@@ -349,7 +349,8 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.31rem;
   color: #fff;
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0;
+  outline: none; }
   .input--light::placeholder {
     color: #fff; }
 
@@ -951,7 +952,8 @@ img {
   .feedback .section-title__heading {
     margin-bottom: 1rem; }
   .feedback .card__text {
-    margin-top: 0; }
+    margin-top: 0;
+    width: 80%; }
   .feedback .card__image {
     border-radius: 50%;
     width: 5.428rem; }
@@ -986,7 +988,7 @@ img {
       display: flex;
       align-items: center; }
     .feedback .card__pricetag__text {
-      padding-left: 15px; }
+      padding-left: 11px; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") center no-repeat;
@@ -1075,11 +1077,24 @@ img {
     max-width: 1900px;
     margin: auto; } }
 
+@media screen and (max-width: 1600px) {
+  .feedback .card__text {
+    max-width: 350px; }
+  .feedback .card__pricetag {
+    font-size: 1rem;
+    width: 90%; } }
+
+@media screen and (max-width: 1295px) {
+  .feedback .card__list {
+    width: 100%; }
+  .feedback .card__title {
+    font-size: 1.17rem; } }
+
 @media screen and (min-width: 1200px) {
   .nav__item {
     margin-right: 2.59rem; } }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1218px) {
   html {
     font-size: 12px; }
   .nav__item {
@@ -1258,7 +1273,40 @@ img {
 
 @media screen and (max-width: 500px) {
   .hero .container {
-    margin-top: 6.071rem; } }
+    margin-top: 6.071rem; }
+  .footer {
+    background: #131313; }
+    .footer__wrap {
+      background-color: #131313;
+      padding: 0 0 3.715rem 0;
+      margin: 0; }
+    .footer__title {
+      font-size: 1.6rem;
+      margin-bottom: 4.15rem; }
+      .footer__title__heading {
+        font-size: 1.41rem;
+        line-height: 138.6%;
+        max-width: 26rem; }
+      .footer__title-icon__mail, .footer__title-icon__inst {
+        width: 39px; }
+    .footer__form {
+      display: block; }
+    .footer__input {
+      font-size: 1.45rem;
+      margin-top: 0; }
+      .footer__input-group {
+        margin-bottom: 4.8rem; }
+        .footer__input-group--full-width {
+          margin-bottom: 4.75rem; }
+    .footer__policy {
+      display: flex;
+      margin-bottom: 5.5rem;
+      margin-top: -3rem;
+      margin-left: -1rem; }
+    .footer__button {
+      width: 100%; }
+    .footer__menu {
+      display: none; } }
 
 @media screen and (max-width: 375px) {
   .hero {

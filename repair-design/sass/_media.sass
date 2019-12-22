@@ -3,11 +3,26 @@
     width: 91%
     max-width: 1900px
     margin:  auto
+@media screen and ( max-width: 1600px )
+  .feedback
+    .card
+      &__text
+        max-width: 350px
+      &__pricetag
+        font-size: 1rem
+        width: 90% 
+@media screen and ( max-width: 1295px )
+  .feedback
+    .card
+      &__list
+        width: 100%
+      &__title
+        font-size: 1.17rem
 @media screen and ( min-width: 1200px )
   .nav
     &__item
       margin-right: 2.59rem
-@media screen and ( max-width: 1200px )
+@media screen and ( max-width: 1218px )
   html
     font-size: 12px
   .nav
@@ -206,6 +221,40 @@
   .hero
     .container
       margin-top: 6.071rem
+  .footer
+    background: $dark
+    &__wrap
+      background-color: $dark
+      padding: 0 0 3.715rem 0
+      margin: 0
+    &__title
+      font-size: 1.6rem
+      margin-bottom: 4.15rem
+      &__heading
+        font-size: 1.41rem
+        line-height: 138.6%
+        max-width: 26rem
+      &-icon
+        &__mail, &__inst
+          width: 39px
+    &__form
+      display: block
+    &__input
+      font-size: 1.45rem
+      margin-top: 0
+      &-group
+        margin-bottom: 4.8rem
+        &--full-width
+          margin-bottom: 4.75rem
+    &__policy
+      display: flex
+      margin-bottom: 5.5rem
+      margin-top: -3rem
+      margin-left: -1rem
+    &__button
+      width: 100%
+    &__menu
+      display: none
 @media screen and ( max-width: 375px )
   .hero
     height: 92.4vh
