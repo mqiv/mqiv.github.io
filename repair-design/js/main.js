@@ -130,6 +130,21 @@ $(document).ready(function () {
   // Маска для телефона
   $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
+  
+  $('#offer-form').on('submit' , function name(event) {
+    event.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(this).serialize(),
+      success: function (response) {
+        console.log('Пришли данные: ' + response);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.error(jqXHR + " " + textStatus);
+      }
+    });
+  })
 
   // КАРТА
   ymaps.ready(function () {
@@ -172,21 +187,6 @@ $(document).ready(function () {
   });
 });
 
-
-// ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ВНЕ ЕГО ОБЛАСТИ
-$(document).mouseup(function (e){ // событие клика по веб-документу
-  var modalctr = $("#mod"); // тут указываем ID элемента
-  var modall = $('#mud')
-  if (modall.is(e.target) && modall.has(e.target).length === 0){
-    modalctr.hide();
-    modall.hide();
-  }
-  
-  // if (div.is(e.target) // если клик был по нашему блоку
-  //     && div.has(e.target).length === 0) { // и не по его дочерним элементам
-  //   div.hide(); // скрываем его
-  // }
-});
 
 // ЗАМЕНА БЛОКОВ
 $(function() {

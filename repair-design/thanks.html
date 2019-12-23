@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=907cb069-8f9f-4563-840c-174a9b49f2b6&lang=ru_RU" type="text/javascript">
-  </script>
   <title>Reapir Design</title>
 </head>
 
@@ -59,7 +57,7 @@
     <div class="modal__dialog" id="mod">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-      <form action="send.php" method="POST" class="form modal__form">
+      <form action="send.php" method="POST" id="offer-modal" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="user-name" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
