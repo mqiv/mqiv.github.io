@@ -163,6 +163,70 @@ $(document).ready(function () {
       },
     });
   })
+  $('#footer-modal').on('submit', function name(event) {
+    event.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(this).serialize(),
+      success: function (response) {
+        console.log('Пришли данные: ' + response);
+        $('#footer-modal')[0].reset();
+
+        
+        var modalSmall = $('.modal-small'),
+            modalSmallBtn = $('[data-toggle=modal-small]');
+            closeSmallBtn = $('.modal-small__close');
+        
+        modalSmall.toggleClass('modal-small--visible');
+        // $('.modal-small__title').text(response);
+
+        modalSmallBtn.on('click', function () {
+          modalSmall.toggleClass('modal-small--visible');
+        });
+        closeSmallBtn.on('click', function () {
+          modalSmall.toggleClass('modal-small--visible');
+        });
+
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.error(jqXHR + " " + textStatus);
+      },
+    });
+  })
+  $('#control-modal').on('submit', function name(event) {
+    event.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(this).serialize(),
+      success: function (response) {
+        console.log('Пришли данные: ' + response);
+        $('#control-modal')[0].reset();
+
+        var modalSmall = $('.modal-small'),
+            modalSmallBtn = $('[data-toggle=modal-small]');
+            closeSmallBtn = $('.modal-small__close');
+        
+        
+        modalSmall.toggleClass('modal-small--visible');
+        // $('.modal-small__title').text(response);
+
+        modalSmallBtn.on('click', function () {
+          modalSmall.toggleClass('modal-small--visible');
+        });
+        closeSmallBtn.on('click', function () {
+          modalSmall.toggleClass('modal-small--visible');
+        });
+
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.error(jqXHR + " " + textStatus);
+      },
+    });
+  })
 
   // КАРТА
   ymaps.ready(function () {
