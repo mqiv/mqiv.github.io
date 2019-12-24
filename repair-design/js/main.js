@@ -1,7 +1,7 @@
 $(document).ready(function () {
   var modal = $('.modal'),
-      modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close');
+    modalBtn = $('[data-toggle=modal]'),
+    closeBtn = $('.modal__close');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -12,20 +12,20 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 800) {
-        $('.scrollup').fadeIn();
+      $('.scrollup').fadeIn();
     } else {
-        $('.scrollup').fadeOut();
+      $('.scrollup').fadeOut();
     }
   });
-      
-    $('.scrollup').click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 1500);
-      return false;
-    });
-    //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container', {
-     loop: true,
-     pagination: {
+
+  $('.scrollup').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 1500);
+    return false;
+  });
+  //initialize swiper when document ready
+  var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
     },
@@ -37,19 +37,19 @@ $(document).ready(function () {
       enabled: true,
       onlyInViewport: false,
     },
-   });
+  });
 
-   var next = $('.swiper-button-next');
-   var prev = $('.swiper-button-prev');
-   var bullets = $('.swiper-pagination');
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
 
-   next.css('left', prev.width() + 25 + bullets.width() + 25)
-   bullets.css('left', prev.width() + 25)
+  next.css('left', prev.width() + 25 + bullets.width() + 25)
+  bullets.css('left', prev.width() + 25)
 
-   new WOW().init();
+  new WOW().init();
 
   // ВАЛИДАЦИЯ ФОРМЫ
-   $('.modal__form').validate({
+  $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
     rules: {
@@ -73,14 +73,14 @@ $(document).ready(function () {
         maxlength: "Имя не должно быть длинее 15 символов"
       },
       userPhone: "Введите телефон",
-      userEmail:{
+      userEmail: {
         required: "Укажите свой Email",
         email: "Введите в формате: example@domain.com"
       }
     }
   });
 
-   $('.footer__form').validate({
+  $('.footer__form').validate({
     errorClass: "invalid",
     errorElement: "div",
     rules: {
@@ -128,106 +128,124 @@ $(document).ready(function () {
 
 
   // Маска для телефона
-  $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7 (000) 000-00-00', { placeholder: "+7 (___) ___-__-__" });
 
-  
-  $('#offer-form').on('submit' , function name(event) {
+  $('#offer-modal').on('submit', function name(event) {
     event.preventDefault();
+
     $.ajax({
       type: "POST",
       url: "send.php",
       data: $(this).serialize(),
       success: function (response) {
         console.log('Пришли данные: ' + response);
+        $('#offer-modal')[0].reset();
+
+        
+        var modalSmall = $('.modal-small'),
+            modalSmallBtn = $('[data-toggle=modal-small]');
+            closeSmallBtn = $('.modal-small__close');
+        
+        modal.toggleClass('modal--visible');
+        modalSmall.toggleClass('modal-small--visible');
+        // $('.modal-small__title').text(response);
+
+        modalSmallBtn.on('click', function () {
+          modalSmall.toggleClass('modal-small--visible');
+        });
+        closeSmallBtn.on('click', function () {
+          modalSmall.toggleClass('modal-small--visible');
+        });
+
       },
       error: function (jqXHR, textStatus, errorThrown) {
         console.error(jqXHR + " " + textStatus);
-      }
+      },
     });
   })
 
   // КАРТА
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-            center: [47.244734, 39.723227],
-            zoom: 13
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+      center: [47.244734, 39.723227],
+      zoom: 13
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Вход со двора'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/pin.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        }),
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наш офис',
+        balloonContent: 'Вход со двора'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/pin.png',
+        // Размеры метки.
+        iconImageSize: [32, 32],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-5, -38]
+      }),
 
-        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-            hintContent: 'Собственный значок метки с контентом',
-            balloonContent: 'А эта — новогодняя',
-            iconContent: '12'
-        });
+      myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+        hintContent: 'Собственный значок метки с контентом',
+        balloonContent: 'А эта — новогодняя',
+        iconContent: '12'
+      });
 
     myMap.geoObjects
-        .add(myPlacemark)
+      .add(myPlacemark)
   });
 });
 
 
 // ЗАМЕНА БЛОКОВ
-$(function() {
+$(function () {
   var first = $(".swiper-container-first");
   var second = $(".swiper-container-second");
-  $(window).resize(function() {
-      var i = $(".swiper-container-first, .swiper-container-second").index(first);
-      if ($(window).width() <= "820" && !i) {
-          var a = $("<abracadabra/>");
-          a.insertAfter(first);
-          first.insertAfter(second);
-          second.insertAfter(a);
-          a.remove()
-      } else if ($(window).width() > "820" && i) {
-          var a = $("<abracadabra/>");
-          a.insertAfter(first);
-          first.insertAfter(second);
-          second.insertAfter(a);
-          a.remove()
-      }
+  $(window).resize(function () {
+    var i = $(".swiper-container-first, .swiper-container-second").index(first);
+    if ($(window).width() <= "820" && !i) {
+      var a = $("<abracadabra/>");
+      a.insertAfter(first);
+      first.insertAfter(second);
+      second.insertAfter(a);
+      a.remove()
+    } else if ($(window).width() > "820" && i) {
+      var a = $("<abracadabra/>");
+      a.insertAfter(first);
+      first.insertAfter(second);
+      second.insertAfter(a);
+      a.remove()
+    }
   }).resize()
 });
 
 // ЗАМЕНА БЛОКОВ
-$(function() {
+$(function () {
   var first = $(".control__button-first");
   var second = $(".control__policy-second");
-  $(window).resize(function() {
-      var i = $(".control__button-first, .control__policy-second").index(first);
-      if ($(window).width() <= "770" && !i) {
-          var a = $("<abracadabra/>");
-          a.insertAfter(first);
-          first.insertAfter(second);
-          second.insertAfter(a);
-          a.remove()
-      } else if ($(window).width() > "770" && i) {
-          var a = $("<abracadabra/>");
-          a.insertAfter(first);
-          first.insertAfter(second);
-          second.insertAfter(a);
-          a.remove()
-      }
+  $(window).resize(function () {
+    var i = $(".control__button-first, .control__policy-second").index(first);
+    if ($(window).width() <= "770" && !i) {
+      var a = $("<abracadabra/>");
+      a.insertAfter(first);
+      first.insertAfter(second);
+      second.insertAfter(a);
+      a.remove()
+    } else if ($(window).width() > "770" && i) {
+      var a = $("<abracadabra/>");
+      a.insertAfter(first);
+      first.insertAfter(second);
+      second.insertAfter(a);
+      a.remove()
+    }
   }).resize()
 });

@@ -5,9 +5,9 @@ $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
 
 // Load Composer's autoloader
-require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -24,16 +24,17 @@ try {
     $mail->Port       = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('mqivdb@gmail.com', 'Daniil');
+    $mail->setFrom('mqivdb@gmail.com');
     $mail->addAddress('danya5319@gmail.com');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = 'Имя пользователя: ${userName}, его телефон: ${userPhone}. его почта: ${userEmail}';
+    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
 
     $mail->send();
-    header('Location: thanks.html');
+    // header('Location: ./index.html'),
+    echo "Форма успешно отправлена.";
 } catch (Exception $e) {
-    echo " Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
