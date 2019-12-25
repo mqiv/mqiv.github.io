@@ -1,7 +1,7 @@
 $(document).ready(function () {
   var modal = $('.modal'),
-    modalBtn = $('[data-toggle=modal]'),
-    closeBtn = $('.modal__close');
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -141,11 +141,11 @@ $(document).ready(function () {
         console.log('Пришли данные: ' + response);
         $('#offer-modal')[0].reset();
 
-        
+
         var modalSmall = $('.modal-small'),
             modalSmallBtn = $('[data-toggle=modal-small]');
             closeSmallBtn = $('.modal-small__close');
-        
+
         modal.toggleClass('modal--visible');
         modalSmall.toggleClass('modal-small--visible');
         // $('.modal-small__title').text(response);
@@ -174,11 +174,11 @@ $(document).ready(function () {
         console.log('Пришли данные: ' + response);
         $('#footer-modal')[0].reset();
 
-        
+
         var modalSmall = $('.modal-small'),
             modalSmallBtn = $('[data-toggle=modal-small]');
             closeSmallBtn = $('.modal-small__close');
-        
+
         modalSmall.toggleClass('modal-small--visible');
         // $('.modal-small__title').text(response);
 
@@ -209,8 +209,8 @@ $(document).ready(function () {
         var modalSmall = $('.modal-small'),
             modalSmallBtn = $('[data-toggle=modal-small]');
             closeSmallBtn = $('.modal-small__close');
-        
-        
+
+
         modalSmall.toggleClass('modal-small--visible');
         // $('.modal-small__title').text(response);
 
