@@ -444,7 +444,8 @@ img {
     .section-title__heading {
       font-family: 'Yeseva One', cursive;
       text-transform: uppercase;
-      line-height: 138.6%; }
+      line-height: 138.6%;
+      font-weight: normal; }
       .section-title__heading--primary {
         color: #E3B873;
         font-size: 1.6rem; }

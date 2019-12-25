@@ -11,7 +11,7 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 800) {
+    if ($(window).scrollTop() > 800) {
       $('.scrollup').fadeIn();
     } else {
       $('.scrollup').fadeOut();
@@ -77,7 +77,7 @@ $(document).ready(function () {
         required: "Укажите свой Email",
         email: "Введите в формате: example@domain.com"
       }
-    }
+    },
   });
 
   $('.footer__form').validate({
@@ -141,20 +141,14 @@ $(document).ready(function () {
         console.log('Пришли данные: ' + response);
         $('#offer-modal')[0].reset();
 
-
         var modalSmall = $('.modal-small'),
-            modalSmallBtn = $('[data-toggle=modal-small]');
             closeSmallBtn = $('.modal-small__close');
 
-        modal.toggleClass('modal--visible');
+        modal.removeClass('modal--visible');
         modalSmall.toggleClass('modal-small--visible');
-        // $('.modal-small__title').text(response);
 
-        modalSmallBtn.on('click', function () {
-          modalSmall.toggleClass('modal-small--visible');
-        });
         closeSmallBtn.on('click', function () {
-          modalSmall.toggleClass('modal-small--visible');
+          modalSmall.removeClass('modal-small--visible');
         });
 
       },
@@ -176,17 +170,11 @@ $(document).ready(function () {
 
 
         var modalSmall = $('.modal-small'),
-            modalSmallBtn = $('[data-toggle=modal-small]');
             closeSmallBtn = $('.modal-small__close');
 
         modalSmall.toggleClass('modal-small--visible');
-        // $('.modal-small__title').text(response);
-
-        modalSmallBtn.on('click', function () {
-          modalSmall.toggleClass('modal-small--visible');
-        });
         closeSmallBtn.on('click', function () {
-          modalSmall.toggleClass('modal-small--visible');
+          modalSmall.removeClass('modal-small--visible');
         });
 
       },
@@ -207,18 +195,11 @@ $(document).ready(function () {
         $('#control-modal')[0].reset();
 
         var modalSmall = $('.modal-small'),
-            modalSmallBtn = $('[data-toggle=modal-small]');
             closeSmallBtn = $('.modal-small__close');
 
-
         modalSmall.toggleClass('modal-small--visible');
-        // $('.modal-small__title').text(response);
-
-        modalSmallBtn.on('click', function () {
-          modalSmall.toggleClass('modal-small--visible');
-        });
         closeSmallBtn.on('click', function () {
-          modalSmall.toggleClass('modal-small--visible');
+          modalSmall.removeClass('modal-small--visible');
         });
 
       },

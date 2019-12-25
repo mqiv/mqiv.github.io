@@ -89,5 +89,11 @@ function svgmin(done) {
     done();
 }
 
+function htaccess(done) {
+    src('.htaccess')
+        .pipe(dest('dist/'));
+    done();
+}
+
 exports.serve = bs;
-exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin, svgmin);
+exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin, svgmin, htaccess);
