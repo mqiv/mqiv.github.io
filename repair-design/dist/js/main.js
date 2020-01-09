@@ -20,7 +20,7 @@ $(document).ready(function () {
 
   $('.scrollup').click(function () {
     $("html, body").animate({ scrollTop: 0 }, 1500);
-    return false;
+    return true;
   });
   //initialize swiper when document ready
   var mySwiper = new Swiper('.swiper-container', {
@@ -102,8 +102,6 @@ $(document).ready(function () {
     }
   });
 
-
-
   $('.control__form').validate({
     errorClass: "invalid",
     errorElement: "label",
@@ -125,8 +123,6 @@ $(document).ready(function () {
       userPhone: "Введите телефон",
     }
   });
-
-
   // Маска для телефона
   $('[type=tel]').mask('+7 (000) 000-00-00', { placeholder: "+7 (___) ___-__-__" });
 
@@ -248,6 +244,21 @@ $(document).ready(function () {
     myMap.geoObjects
       .add(myPlacemark)
   });
+  // var player;
+  // $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  //   player = new YT.Player('player', {
+  //     height: '460',
+  //     width: '100%',
+  //     videoId: 'dUL-Rfad3lQ',
+  //     events: {
+  //       'onReady': videoPlay,
+  //     }
+  //   });
+  // })
+
+  // function videoPlay(event) {
+  //   event.target.playVideo();
+  // }
 });
 
 
@@ -286,6 +297,27 @@ $(function () {
       second.insertAfter(a);
       a.remove()
     } else if ($(window).width() > "770" && i) {
+      var a = $("<abracadabra/>");
+      a.insertAfter(first);
+      first.insertAfter(second);
+      second.insertAfter(a);
+      a.remove()
+    }
+  }).resize()
+});
+
+$(function () {
+  var first = $(".footer__title--primary");
+  var second = $(".footer__map");
+  $(window).resize(function () {
+    var i = $(".footer__title--primary, .footer__map").index(first);
+    if ($(window).width() <= "500" && !i) {
+      var a = $("<abracadabra/>");
+      a.insertAfter(first);
+      first.insertAfter(second);
+      second.insertAfter(a);
+      a.remove()
+    } else if ($(window).width() > "50" && i) {
       var a = $("<abracadabra/>");
       a.insertAfter(first);
       first.insertAfter(second);

@@ -5,15 +5,18 @@
     display: flex
     flex-wrap: wrap
     &__text
-      flex-basis: 50%
-      margin-bottom: 2.42rem
+      flex-basis: 34%
+      margin-top: 0.7rem
+      margin-bottom: -1.3rem
       padding-bottom: 2rem
+      &:nth-last-child(-n+2)
+        margin-bottom: 5.5rem
     &__heading
       color: $primary
       font-family: 'Yeseva One', cursive
       text-transform: uppercase
-      font-size: 1.19rem
       line-height: 1.7rem
+      font-weight: normal
       margin-bottom: 0.64rem
       margin-top: 1.6rem
   &-pagination

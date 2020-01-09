@@ -9,11 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Reapir Design</title>
 </head>
 
 <body>
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(56860510, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56860510" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container">
       <div class="menu">
@@ -28,7 +30,7 @@
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <button class="button contacts__button button--primary wow shake" data-wow-delay="15s" data-toggle="modal">Заказать звонок</button>
+          <button onclick="ym(64552978, 'reachGoal', 'button'); return true;" class="button contacts__button button--primary wow shake" data-wow-delay="15s" data-toggle="modal">Заказать звонок</button>
         </div>
       </div>
       <!-- /.menu -->
@@ -52,13 +54,13 @@
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down wow pulse">листайте вниз</a>
+      <a href="#project" class="hero__scroll-down wow pulse">листайте вниз</a>
     </section>
     <!-- /.hero -->
-    <section class="section section--dark projects">
+    <section class="section section--dark projects" id="project">
       <div class="container">
         <div class="row">
-          <div class="col-50">
+          <div class="col-50 col-50__one">
             <div class="section-title section-title--left">
               <h2 class="section-title__heading section-title__heading--primary">Завершенные <span
                   class="section-title__word">проекты</span></h2>
@@ -151,7 +153,7 @@
             </div>
           </div>
           <!-- /.col-50 -->
-          <div class="col-50">
+          <div class="col-50 col-50__two">
 
             <!-- Slider main container -->
             <div class="swiper-container swiper-container-second">
@@ -191,8 +193,10 @@
           <!-- /.section-title__image -->
         </div>
         <!-- /.section-title -->
-        <div class="control__video video">
-          <img src="img/play-icon.svg" alt="play icon" class="video__play">
+        <div class="control__video video" id="player">
+          <a data-fancybox href="https://www.youtube.com/watch?v=dUL-Rfad3lQ" class="video__play">
+            <img src="img/play-icon.svg" alt="play icon">
+          </a>
         </div>
         <!-- /.control__video video -->
         <p class="control__text wow zoomIn">
@@ -469,81 +473,87 @@
               <div class="swiper-wrapper swiper-no-swiping">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <div class="swiper-slide__text">
-                    <p class="swiper-slide__heading">Выезд на замеры помещения</p>
-                    <span class="swiper-slide__value">После вашего звонка мы идем к вам, чтобы проконсультироваться и
-                      измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
-                      вопросы, касаемо ремонта.
-                      <span class="swiper-slider__value__two">Оценщик приходит, чтобы измерить комнату.  Он
+                  <h3 class="swiper-slide__number">1/6</h3>
+                    <div class="swiper-slide__text">
+                      <h3 class="swiper-slide__heading">Выезд на замеры помещения</h3>
+                      <span class="swiper-slide__value">После вашего звонка мы идем к вам, чтобы проконсультироваться и
+                        измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
+                        вопросы, касаемо ремонта.
+                      </span>
+                      <span class="swiper-slide__value">Оценщик приходит, чтобы измерить комнату.<br>Он
                         проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
-                        целом и отдельных ее этапов</span>.
-                    </span>
+                        целом и отдельных ее этапов.</span>
                   </div>
                   <!-- /.swiper-slide__text -->
                 </div>
                 <!-- /.swiper-slide -->
                 <div class="swiper-slide ">
+                  <h3 class="swiper-slide__number">2/6</h3>
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Выезд на замеры помещения</h3>
                     <span class="swiper-slide__value">После вашего звонка мы идем к вам, чтобы проконсультироваться и
                       измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
                       вопросы, касаемо ремонта.
-                      <span class="swiper-slider__value__two">Оценщик приходит, чтобы измерить комнату.  Он
-                        проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
-                        целом и отдельных ее этапов</span>.
                     </span>
+                    <span class="swiper-slide__value">Оценщик приходит, чтобы измерить комнату.<br>Он
+                      проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                      целом и отдельных ее этапов.</span>
                   </div>
                   <!-- /.swiper-slide__text -->
                 </div>
                 <div class="swiper-slide ">
+                  <h3 class="swiper-slide__number">3/6</h3>
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Выезд на замеры помещения</h3>
                     <span class="swiper-slide__value">После вашего звонка мы идем к вам, чтобы проконсультироваться и
                       измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
                       вопросы, касаемо ремонта.
-                      <span class="swiper-slider__value__two">Оценщик приходит, чтобы измерить комнату.  Он
-                        проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
-                        целом и отдельных ее этапов</span>.
                     </span>
+                    <span class="swiper-slide__value">Оценщик приходит, чтобы измерить комнату.<br>Он
+                      проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                      целом и отдельных ее этапов.</span>
                   </div>
                   <!-- /.swiper-slide__text -->
                 </div>
                 <div class="swiper-slide ">
+                  <h3 class="swiper-slide__number">4/6</h3>
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Выезд на замеры помещения</h3>
                     <span class="swiper-slide__value">После вашего звонка мы идем к вам, чтобы проконсультироваться и
                       измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
                       вопросы, касаемо ремонта.
-                      <span class="swiper-slider__value__two">Оценщик приходит, чтобы измерить комнату.  Он
-                        проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
-                        целом и отдельных ее этапов</span>.
                     </span>
+                    <span class="swiper-slide__value">Оценщик приходит, чтобы измерить комнату.<br>Он
+                      проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                      целом и отдельных ее этапов.</span>
                   </div>
                   <!-- /.swiper-slide__text -->
                 </div>
                 <div class="swiper-slide ">
+                  <h3 class="swiper-slide__number">5/6</h3>
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Выезд на замеры помещения</h3>
                     <span class="swiper-slide__value">После вашего звонка мы идем к вам, чтобы проконсультироваться и
                       измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
                       вопросы, касаемо ремонта.
-                      <span class="swiper-slider__value__two">Оценщик приходит, чтобы измерить комнату.  Он
-                        проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
-                        целом и отдельных ее этапов</span>.
                     </span>
+                    <span class="swiper-slide__value">Оценщик приходит, чтобы измерить комнату.<br>Он
+                      проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                      целом и отдельных ее этапов.</span>
                   </div>
                   <!-- /.swiper-slide__text -->
                 </div>
                 <div class="swiper-slide ">
+                  <h3 class="swiper-slide__number">6/6</h3>
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Выезд на замеры помещения</h3>
                     <span class="swiper-slide__value">После вашего звонка мы идем к вам, чтобы проконсультироваться и
                       измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
                       вопросы, касаемо ремонта.
-                      <span class="swiper-slider__value__two">Оценщик приходит, чтобы измерить комнату.  Он
-                        проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
-                        целом и отдельных ее этапов</span>.
                     </span>
+                    <span class="swiper-slide__value">Оценщик приходит, чтобы измерить комнату.<br>Он
+                      проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в
+                      целом и отдельных ее этапов.</span>
                   </div>
                   <!-- /.swiper-slide__text -->
                 </div>
@@ -560,6 +570,36 @@
           <!-- /.col-50 -->
           <div class="col-50 col-50__idea__two">
             <!-- Slider main container -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper swiper-no-swiping">
+                <div class="swiper-slide swiper-slide__number">
+                  <div class="swiper-slide__text swiper-slide__text--number">
+                    <h3 class="swiper-slide__heading swiper-slide__heading--number">01</h3>
+                    <span class="swiper-slide__value swiper-slide__value--number">Выезд на замеры помещения</span>
+                  </div>
+                  <div class="swiper-slide__text swiper-slide__text--number">
+                    <h3 class="swiper-slide__heading swiper-slide__heading--number">02</h3>
+                    <span class="swiper-slide__value swiper-slide__value--number">Составление сметы</span>
+                  </div>
+                  <div class="swiper-slide__text swiper-slide__text--number">
+                    <h3 class="swiper-slide__heading swiper-slide__heading--number">03</h3>
+                    <span class="swiper-slide__value swiper-slide__value--number">Разработка  дизайн проекта</span>
+                  </div>
+                  <div class="swiper-slide__text swiper-slide__text--number">
+                    <h3 class="swiper-slide__heading swiper-slide__heading--number">04</h3>
+                    <span class="swiper-slide__value swiper-slide__value--number">Закупка расходных материалов</span>
+                  </div>
+                  <div class="swiper-slide__text swiper-slide__text--number">
+                    <h3 class="swiper-slide__heading swiper-slide__heading--number">05</h3>
+                    <span class="swiper-slide__value swiper-slide__value--number">Ремонтно-отделочные работы</span>
+                  </div>
+                  <div class="swiper-slide__text swiper-slide__text--number">
+                    <h3 class="swiper-slide__heading swiper-slide__heading--number">06</h3>
+                    <span class="swiper-slide__value swiper-slide__value--number">Приемка-сдача работ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="swiper-container">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper swiper-no-swiping">
@@ -685,7 +725,7 @@
     <section class="section feedback">
       <div class="container">
         <div class="section-title feedback__section-title ">
-          <h2 class="section-title__heading wow fadeInUp" data-wow-delay="0.3s">Наша клиенты</h2>
+          <h2 class="section-title__heading wow fadeInUp" data-wow-delay="0.3s">Наши клиенты</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
             <img src="img/feedback.svg" alt="feedback">
@@ -783,7 +823,7 @@
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
-        <form action="send.php" method="POST" id="footer-modal" class="form footer__form">
+        <form action="send.php" onsubmit="ym(64579714, 'reachGoal', 'submit application'); return true;" method="POST" id="footer-modal" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label--light">Имя</label>
             <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
@@ -806,7 +846,7 @@
         <!-- /.form footer__form -->
       </div>
       <!-- /.footer-wrap -->
-      <div class="footer__title">
+      <div class="footer__title footer__title--primary">
         <h2 class="footer__title__heading">
           Ростов на дону, Торговый центр Plaza
           Прямой телефон +7 (999) 768 32 99
@@ -847,7 +887,7 @@
   </footer>
   <div class="modal closeModal">
     <div class="modal__dialog">
-      <button class="modal__close"></button>
+      <button class="modal__close" onclick="ym(64653571, 'reachGoal', 'button1'); return true;"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="send.php" method="POST" id="offer-modal" class="form modal__form">
         <div class="input-group modal__input-group">
@@ -890,8 +930,9 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="js/main.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=907cb069-8f9f-4563-840c-174a9b49f2b6&lang=ru_RU"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

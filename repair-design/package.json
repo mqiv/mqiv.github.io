@@ -19,11 +19,19 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
     "gulp-cssmin": "^0.2.0",
+    "gulp-minify": "^3.1.0",
     "gulp-sass": "^4.0.2",
-    "htaccess-configs-mydevil": "^1.0.2"
+    "gulp-svgo": "^2.1.1",
+    "htaccess-configs-mydevil": "^1.0.2",
+    "node-sass": "^4.13.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-tinypng-compress": "^1.2.5",
+    "jquery": "^3.4.1"
   }
 }
