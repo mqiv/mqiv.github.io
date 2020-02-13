@@ -7,9 +7,7 @@ const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 const tinypng = require('gulp-tinypng-compress');
 const svgo = require('gulp-svgo');
-// const rename = require('gulp-rename');
-// const gutil = require('gulp-util')
-// const ftp = require('gulp-ftp');
+// const webp = require('gulp-webp');
 
 function bs() {
     serveSass();
@@ -74,12 +72,12 @@ function fonts(done) {
     done();
 }
 
-function imagemin(done) {
+function imageminTiny(done) {
     src(['img/**/*.jpg', 'img/**/*.png'])
         .pipe(tinypng({ key: 'sPLZWCYm3DYqrRC0hYnW3j2LcTVQCB7V', }))
         .pipe(dest('dist/img/'));
     src('img/*.ico')
-        .pipe(dest('dist/img'));
+        .pipe(dest('dist/img/'));
     done();
 }
 
@@ -96,31 +94,12 @@ function htaccess(done) {
     done();
 }
 
-// function rename(done) {
-//     src('dist/js/main-min.js')
-//         .pipe(rename('dist/js/main.js'))
-//         // .pipe(dest('dist/js'));
+// function imgwebp(done) {
+//     src(['img/design/*.jpg', 'img/team/*.jpg', 'img/types/*.jpg'])
+//         .pipe(webp())
+//         .pipe(dest('dist/img/'));
 //     done();
 // }
 
-// function ftp(done) {
-//     src(('')
-//     done();
-//     var conn = ftp.create({
-//     host:      'mydomain. com',
-//     user:      'my-ftp-user-name',
-//     password:  'MyFtpUserPassword',
-//     parallel:  10,
-//     log: gutil.log
-// });
-
-// var globs = [
-//     'dist/**',
-//     'dist/.htaccess',
-//     ];
-//     return gulp.src(globs, {buffer: false})
-//     .pipe(conn.dest('/www/mydomain.com/'));
-// });
-
 exports.serve = bs;
-exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin, svgmin, htaccess);
+exports.build = series(buildCSS, buildJS, html, php, fonts, imageminTiny, svgmin, htaccess);

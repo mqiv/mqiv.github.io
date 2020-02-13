@@ -35,10 +35,6 @@
     display: none
   .team
     padding-bottom: 20rem
-@media screen and ( max-width: 1080px )
-  .idea
-    .container
-      display: none
 @media screen and ( max-width: 992px )
   html
     font-size: 12px
@@ -130,8 +126,6 @@
         display: none
       &__pricetag
         padding: 1rem 3.8rem
-  .idea
-    display: none
   .team
     background-color: $dark
     color: $light
@@ -180,6 +174,15 @@
         width: 20%
     &__form
       display: block
+  .footer
+    &__wrap
+      padding: 2.457rem 5.964rem
+  .idea
+    display: none
+@media screen and ( min-width: 376px ) and (max-width: 722px )
+  .control
+    &__button
+      margin-top: 2rem
 @media screen and ( max-width: 570px )
   html
     font-size: 12.5px
@@ -267,6 +270,7 @@
 @media screen and ( max-width: 375px )
   .hero
     height: 92.4vh
+    background: $dark url('../img/hero-bg-small.jpg') no-repeat center / cover
     &::after
       display: none
     &__content
@@ -309,6 +313,11 @@
         margin-bottom: -3rem
         &:nth-last-child(-n+2)
           margin-bottom: 3rem
+      img
+        &.img
+          display: none
+        &.img-mobile
+          display: block
     &__value
       font-size: 1.14rem
     &__text
@@ -325,6 +334,8 @@
     background-color: $dark
     color: $light
     height: 32.99rem
+    &__video
+      background: $dark url('../img/video-mask-small.jpg') center no-repeat
     &__section-title
       &__heading
         margin-bottom: 1.25rem
@@ -339,6 +350,7 @@
       padding: 0.5rem 0
       margin: 0.39rem 0
       border-bottom: 1px solid $light
+      color: $light
       &::placeholder
         color: $light
     &__button
@@ -361,6 +373,11 @@
         margin-bottom: 1.1rem
     .container
       width: 90%
+    .card
+      &__image
+        display: none
+        &-mobile
+          display: block
   .types
     &__card
       margin-bottom: 4.5rem
@@ -382,8 +399,12 @@
     &__section-title
       margin-top: 0
     .card
+      &__image
+        display: none
+        &-mobile
+          display: block
       &__text
-        margin: -6.2rem auto 7.928rem
+        margin: -9.2rem auto 7.928rem
       &__pricetag
         padding: 1.2rem 3.48rem
   .footer
@@ -422,3 +443,10 @@
       display: none
   .design
     padding-bottom: 0rem
+    .card
+      &__image
+        display: none
+        &-mobile
+          display: block
+  .idea
+    display: none
