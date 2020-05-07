@@ -20,7 +20,7 @@ function bs() {
     watch("./sass/**/*.sass", serveSass);
     watch("./sass/**/*.scss", serveSass);
     watch("./js/*.js").on('change', browserSync.reload);
-};
+}
 
 function serveSass() {
     return src("./sass/**/*.sass", "./sass/**/*.scss")
@@ -41,8 +41,9 @@ function buildCSS(done) {
 
 function buildJS(done) {
     src(['js/**.js', '!js/**.min.js'])
-        .pipe(minify({ext:{
-                min:'.js'
+        .pipe(minify({
+            ext: {
+                min: '.js'
             }
         }))
         .pipe(dest('dist/js/'));
