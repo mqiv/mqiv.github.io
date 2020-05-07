@@ -121,6 +121,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-.php
+*.php
+
+phpmailer/
 
 # End of https://www.gitignore.io/api/node,windows
