@@ -25,7 +25,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-svgo": "^2.1.1",
     "htaccess-configs-mydevil": "^1.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
